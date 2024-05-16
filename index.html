@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>search page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+  </head>
+  <body>
+    
+      <main>
+        <div class="big-wrapper light">
+
+                     <!--navbar-->
+          <img src="" alt="image" class="shape"/>
+          <header>
+      
+            <div class="container">
+              <div class="name">
+                <h1>TaskChef</h1>
+              </div>
+              <div class="account" id="user-container">
+                <ul>
+                    <div class="contact contact-us-btn">
+                      <li><a href="#">Contact Us</a></li>
+                    </div>
+                    
+                    <button class="faq "><b>?</b></button>
+                      <li class="logged-out " style="display: none">
+                      <a
+                        class="waves-effect waves-light btn modal-trigger"
+                        data-target="modal-login"
+                        id="login"
+                      >Log in</a>
+                    </li>
+                    <li class="logged-out " style="display: none">
+                      <a
+                        class="waves-effect waves-light btn modal-trigger"
+                        data-target="modal-signup"
+                        id="signup">
+                        Sign up
+                        </a>
+                    </li>
+                    <li class="logged-in" style="display: none">
+                      <a
+                        class="waves-effect waves-light btn modal-trigger"
+                        data-target="modal-account"
+                        >Account</a>
+                    </li>
+                    <li class="logged-in" style="display: none">
+                      <a class="waves-effect waves-light btn modal-trigger" id="logout"
+                      >Logout</a>
+                    </li>
+                </ul>
+              </div>
+
+              <div class="overlay"></div>
+              <div class="hamburger-menu">
+                <div class="bar"></div>
+              </div>
+              
+            </div>
+    
+          
+          </header>
+
+          <!--main=section-->
+
+          <div class="showcase-area">
+            <div class="container">
+              <div class="left">
+                <div class="big-title">
+                  <h4 class="t1">Let's start cooking with</h4>
+                  <h2 class="t2">PERSONALISED TAILORED RECIPES</h2>
+                </div>
+                <p class="text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Delectus eius distinctio odit, magni magnam qui ex perferendis
+                  vitae!
+                </p>
+                <div class="cta">
+                  <a href="#" class="btn ">Discover Recipe</a>
+                </div>
+              </div>
+  
+              <div class="right">
+                <img src="vecteezy_iftar-fruit-free-illustration-icon_22507093.png" alt="Person Image" class="person" />
+              </div>
+            </div>
+          </div>
+
+           <!--bottom-->
+
+          <div class="bottom-area">
+            <div class="container">
+              <button class="toggle-btn">
+                <i class="far fa-moon"></i>
+                <i class="far fa-sun"></i>
+              </button>
+            </div>
+          </div>
+
+
+        </div>
+      </main>
+   
+
+ 
+    <!-- LOGIN MODAL -->
+    <div id="modal-login" class="modal">
+      <div class="modal-content">
+        <div class="login-header" id="header">
+          <h4>Login</h4>
+          <div class="header-close-btn " id="close-btn" >        
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <br />
+        </div>
+        <form id="login-form">
+          <div class="input-field">
+            <input type="email" id="login-email" required />
+            <label for="login-email">Email address</label>
+          </div>
+          <div class="input-field">
+            <input type="password" id="login-password" required />
+            <label for="login-password">Your password</label>
+          </div>
+          <div class="log-in-submit-btn">
+            <button class="btn yellow darken-2 z-depth-0">Login</button>
+          </div>  
+          <div class="forget-password" id="forget-password"><p><a href="#" id="reset">Forgot password?</a></p></div>
+          <button type="button" class="btn -box-sd-effect"> <i class="fa fa-google fa-lg" aria-hidden="true"></i> sign in with google</button>
+          <button type="button" class="btn -box-sd-effect"> <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i> sign in with linkedin</button>
+          <button type="button" class="btn -box-sd-effect"> <i class="fa fa-windows fa-lg" aria-hidden="true"></i> sign in with microsoft</button>
+        </form>
+      </div>
+    </div> 
+    </div>
+
+    <!-- SIGN UP MODAL -->
+    <div id="modal-signup" class="modal">
+      <div class="modal-content">
+        <div class="login-header" id="header">
+          <h4>Sign up</h4>
+          <div class="header-close-btn " id="close-btn" >        
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <br />
+        </div>
+        
+        <form id="signup-form">
+          <div class="input-field">
+            <input type="text" id="signup-name" required />
+            <label for="name">Name</label>
+          </div>
+          <div class="input-field">
+            <input type="email" id="signup-email" required />
+            <label for="signup-email">Email address</label>
+          </div>
+          <div class="input-field">
+            <input type="password" id="signup-password" required />
+            <label for="signup-password">Choose password</label>
+          </div>
+          <div class="input-field">
+            <input type="password" id="confirmPassword" required />
+            <label for="confirmPassword">Confirm your password</label>
+          </div>
+          <div class="log-in-submit-btn"><button class="btn yellow darken-2 z-depth-0">Sign up</button></div>
+          <div class="forget-password"><p>Clicking <strong>create account</strong> means that you are agree to our <a href="javascript:void(0)">terms of services</a>.</p></div>
+          <hr/>
+          <button type="button" class="btn -box-sd-effect"> <i class="fa fa-google fa-lg" aria-hidden="true"></i> sign up with google</button>
+          <button type="button" class="btn -box-sd-effect"> <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i> sign up with linkedin</button>
+          <button type="button" class="btn -box-sd-effect"> <i class="fa fa-windows fa-lg" aria-hidden="true"></i> sign up with microsoft</button>
+        </form>
+      
+      </div>
+    </div>
+
+     <!--faq button-->
+    <div id="popup-box" class="popup-box">
+      <h2><b>Frequently Asked question</b></h2>
+      <span class="popup-close-btn">&times;</span>
+      <p><b>1. How do I access the recipes on the search page?</b><br>
+
+        To view recipes, you can use the search bar to enter keywords related to the recipe you're looking for. Once you've entered your search query, a list of relevant recipes will be displayed.<br><br>
+
+        <b>2.How can I filter the search results for specific dietary preferences or ingredients?</b><br>
+        
+        On the search page, you can use the filter options provided to refine your search results. Filters may include dietary preferences (e.g., vegetarian, gluten-free) or specific ingredients you want to include or exclude.<br><br>
+        
+        <b> 3. Where can I find the ingredients list for a recipe?</b><br>
+
+        Inside the recipe popup, you'll find a section specifically dedicated to listing all the ingredients needed to prepare the dish.<br><br>
+        
+        <b>4. Do you provide nutritional information for your recipes?</b><br>
+        
+        Yes, nutritional information is available for most recipes. You can find it listed below the ingredients in each recipe.<br><br>
+        
+        <b>5.Can I view the complete recipe instructions before deciding to make it?</b><br>
+        
+        Absolutely! The popup menu not only displays the ingredients but also provides the complete recipe instructions. This allows you to review the steps before starting to cook.<br><br>
+        
+        <b>6.How do I proceed to cook the selected recipe?</b><br>
+
+        Within the recipe popup, you'll find a 'Make Recipe' button. Clicking on this button will guide you through the process of preparing the dish, providing step-by-step instructions.<br><br>
+        
+        <b>7.How are recipes categorized or organized on the platform?</b><br>
+
+        Recipes are often categorized based on various criteria such as cuisine type (Italian, Mexican, etc.), meal type (breakfast, lunch, dinner), dietary preferences, or cooking difficulty level. You can explore recipes by browsing these categories.
+      
+        
+    
+      </p>
+    </div>
+    
+    <!-- ACCOUNT MODAL -->
+    <div id="modal-account" class="modal">
+      <div class="modal-content center-align">
+        <h4>Account details</h4>
+        <br />
+        <div class="account-details"></div>
+      </div>
+    </div>
+
+
+    <!--Contact US-->
+    <div id="contact-us-popup" class="contact-popup">
+      <div class="popup-content">
+        <span class="close-btn popup-close-btn">&times;</span>
+        <h4 class="contact-header">Contact Us</h4>
+        <form id="contact-form">
+          <div class="input-field">
+            <input type="text" id="name" required />
+            <label for="name">Your Name</label>
+          </div>
+          <div class="input-field">
+            <input type="email" id="email" required />
+            <label for="email">Your Email</label>
+          </div>
+          <div class="input-field">
+            <input type="tel" id="phone" required />
+            <label for="phone">Your Phone</label>
+          </div>
+          <div class="contact-us-submit-btn">
+            <button type="submit" class="submit-btn btn">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+      function validateForm(event) {
+        // Prevent the form from submitting
+        event.preventDefault();
+
+        // Get the values from the form
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirmPassword").value;
+
+        // Check if passwords match
+        if (password !== confirmPassword) {
+          document.getElementById("passwordError").innerText =
+            "Passwords do not match";
+        } else {
+          document.getElementById("passwordError").innerText = "";
+
+          // If passwords match, you can proceed with form submission or other actions
+          // For now, just log a message
+          console.log("Form submitted successfully!");
+        }
+      }
+
+      
+
+
+
+    </script>
+
+     
+    <script type="module" src="firebase.js"></script>
+    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+
+      
+    
+  </body>
+</html>
